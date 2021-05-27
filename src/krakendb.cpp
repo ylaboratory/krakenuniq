@@ -231,13 +231,15 @@ uint64_t KrakenDB::reverse_complement(uint64_t kmer) {
 
 // Lexicographically smallest of k-mer and reverse comp. of k-mer
 uint64_t KrakenDB::canonical_representation(uint64_t kmer, uint8_t n) {
-  uint64_t revcom = reverse_complement(kmer, n);
-  return kmer < revcom ? kmer : revcom;
+  //uint64_t revcom = reverse_complement(kmer, n);
+  //return kmer < revcom ? kmer : revcom;
+  return kmer;
 }
 
 uint64_t KrakenDB::canonical_representation(uint64_t kmer) {
-  uint64_t revcom = reverse_complement(kmer, k);
-  return kmer < revcom ? kmer : revcom;
+  //uint64_t revcom = reverse_complement(kmer, k);
+  //return kmer < revcom ? kmer : revcom;
+  return kmer;
 }
 
 // perform search over last range to speed up queries
